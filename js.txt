@@ -1,0 +1,33 @@
+
+$(document).ready(function(){
+    $('input.ballot').prettyCheckable();
+
+    $('#voteForm').submit(function() {
+        var checked_boxes = $('input:checkbox:checked').length
+        if(checked_boxes == 0) {
+            var c = confirm("¿Está seguro que desea votar blanco?");
+            return c;
+        }
+        else if(checked_boxes > 1) {
+            var c = confirm("¿Está seguro que desea votar nulo?");
+            return c;
+        }
+        else
+        return true;
+    });
+
+
+
+
+        $('#voteForm').ajaxForm({
+            target : '#divForms',
+            beforeSubmit: function(){
+            $.validator.messages.required = "Cannot create a ballot without a preference";
+            $("#voteForm").validate();
+        },
+            success: function(){
+                $('#castForm').submit();
+            }
+        });
+
+});
