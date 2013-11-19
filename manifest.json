@@ -1,15 +1,16 @@
 {
     "manifest_version": 2,
     "name": "Votación Electronica",
-    "version": "0.0",
-    //"options_page": "opciones.html",
-    //"background_page": "pagina.html",
-    "description": "versión preliminar",
+    "version": "1.0",
+    "description": "versión 1.0 permite bloquear la carga de un javascript redirigiendo esta a uno nuevo",
+    "background": {"scripts": ["back.js"]},
     "permissions": [
-    "https://secure.flickr.com/"
+        "webRequest",
+        "webRequestBlocking",
+        "*://*.dcc.uchile.cl/",
+        "*://dcc.uchile.cl/"
  	],
     "browser_action": {
-        "default_icon": "/images/ballot.png",
-        "default_popup":"popup.html"
+        "default_icon": "/images/ballot.png"
     }
 }
