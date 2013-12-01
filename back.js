@@ -1,5 +1,5 @@
 var fun =   function(details) {
-    			console.log("hola");
+    			//console.log("hola");
         		if( details.url == "http://dcc.uchile.cl/~eacha/script.js" )
             		return {redirectUrl: "http://dcc.uchile.cl/~eacha/script-2.js" };
     		};
