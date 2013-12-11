@@ -7,6 +7,8 @@
     "permissions": [
         "webRequest",
         "webRequestBlocking",
+        "*://www.u-cursos.cl/",
+        "*://*.votociudadano.cl/",
         "*://*.dcc.uchile.cl/",
         "*://dcc.uchile.cl/"
  	],
